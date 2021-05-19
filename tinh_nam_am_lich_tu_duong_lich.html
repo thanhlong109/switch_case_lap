@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính năm âm lịch từ năm dương lịch</title>
+</head>
+<body>
+    <script>
+        let year=Number(prompt("enter the year"));
+        let message="";
+        
+        switch (Number(year%10)){
+            case 0:{message="canh";break;}
+            case 1:{message="Tân";break;}
+            case 2:{message="Nhâm";break;}
+            case 3:{message="Quý";break;}
+            case 4:{message="giáp";break;}
+            case 5:{message="Ất";break;}
+            case 6:{message="Bính";break;}
+            case 7:{message="Đinh";break;}
+            case 8:{message="Mậu";break;}
+            case 9:{message="kỷ";break;}
+            default:{message="lỗi";break;}
+        }
+        switch (Number(year%12)){
+            case 0:{message+=" Thân";break;}
+            case 1:{message+=" Dậu";break;}
+            case 2:{message+=" Tuất";break;}
+            case 3:{message+=" Hợi";break;}
+            case 4:{message+=" Tí";break;}
+            case 5:{message+=" sửu";break;}
+            case 6:{message+=" Dần";break;}
+            case 7:{message+=" Mẹo";break;}
+            case 8:{message+=" Thìn";break;}
+            case 9:{message+=" Tỵ";break;}
+            case 10:{message+=" Ngọ";break;}
+            case 11:{message+=" Mùi";break;}
+            default:{message+=" lỗi2";break;}
+        }
+        alert(message);
+        document.write(year+": "+message);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm đại học khối D</title>
+</head>
+<body>
+    <h2>Tính điểm ĐH khối D</h2>
+    <h4>Môn Toán <input type="number" id="montoan" placeholder="Enter your math point!"/></h4>
+    <h4>Môn Văn <input type="number" id="monvan" placeholder="Enter your literature point!"/></h4>
+    <h4>Môn Anh <input type="number" id="monanh" placeholder="Enter your english point!"/></h4>
+    <select onchange="selectKV()" id="selectkv">
+        <option value="0.75" selected>KV1</option>
+        <option value="0.5">KV2-NT</option>
+        <option value="0.25">KV2</option>
+        <option value="0">KV3</option>
+    </select>
+    <button onclick="tinhdiem()">Tính điểm</button>
+    <h4 id="display" style="color:red;"></h4>
+    <script>
+       
+        let yourselect = Number(document.getElementById("selectkv").value);
+        function selectKV(){
+             yourselect = Number(document.getElementById("selectkv").value);
+        }
+        function tinhdiem(){
+            let toan =+document.getElementById("montoan").value;
+            let van = +document.getElementById("monvan").value;
+            let anh = +document.getElementById("monanh").value;
+            let sum = toan+van+anh+yourselect;
+            document.getElementById("display").innerHTML=("Tổng điểm ĐH khối D của bạn là: "+sum);
+        }
+        
+    </script>
+</body>
+</html>

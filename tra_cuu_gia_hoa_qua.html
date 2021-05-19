@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tra cứu giá hoa quả</title>
+</head>
+<body>
+    <input type="text" style="width: 250px;;" placeholder="enter fruit name want check!" id="fruit"/>
+    <button onclick="check()">Xem giá</button>
+    <p style="color:green;" id="display1"></p>
+    <ul>
+        <li>Ổi</li>
+        <li>Dưa Hấu</li>
+        <li>Táo</li>
+        <li>Xoài</li>
+        <li>Cam</li>
+        <li>Chôm Chôm</li>
+        <li>Măng Cụt</li>
+    </ul>
+    <script>
+        function check() {
+            let display1 = document.getElementById("display1");
+            switch(document.getElementById("fruit").value){
+                case "Ổi":
+                    display1.innerHTML ="20 000 VNĐ/kg";
+                    break;
+                case "Dưa Hấu":
+                    display1.innerHTML ="20 000 VNĐ/kg";
+                    break;
+                case "Táo":
+                    display1.innerHTML ="30 000 VNĐ/kg";
+                    break;
+                case "Xoài":
+                    display1.innerHTML ="30 000 VNĐ/kg";
+                    break;
+                case "Cam":
+                    display1.innerHTML ="40 000 VNĐ/kg";
+                    break;
+                case "Chôm Chôm":
+                    display1.innerHTML ="40 000 VNĐ/kg";
+                    break;
+                case "Măng Cụt":
+                    display1.innerHTML ="50 000 VNĐ/kg";
+                    break;
+                default:
+                    display1.innerHTML ="Chỉ hỗ trợ xem giá các loại hoa quả bên dưới!";
+                    break;
+       
+            }
+        }
+    </script>
+</body>
+</html>

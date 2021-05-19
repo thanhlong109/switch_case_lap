@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hien thi so ngay trong thang</title>
+</head>
+<body>
+    <script>
+            let num=prompt("nhập tháng bạn muốn kiểm tra số ngày!");//prompt lấy kiểu string nên convert sang number, cái này dễ sai kk
+            switch((Number)(num)){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:{
+                    document.write("Tháng "+num+" có 31 ngày!");
+                    break;
+                }
+                case 2:{
+                    document.write("Tháng 2 có 28 or 29 ngày!");
+                    break;
+                }
+                case 4:
+                case 6:
+                case 9:
+                case 11:{
+                    document.write("Tháng "+num+" có 30 ngày!");
+                    break;
+                }
+                default:
+                    document.write("bạn nhập không đúng! nhập lại!");
+                    check=false;
+                    break;
+            }
+        
+    </script>
+</body>
+</html>
